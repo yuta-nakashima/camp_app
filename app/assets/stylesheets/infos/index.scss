@@ -1,0 +1,175 @@
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f8f8f8;
+}
+
+.title-contents {
+  width: 100vw;
+  height: 400px;
+  background-image: image-url("tent3.png");
+  background-size: over;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #ffffff
+}
+
+.service-title{
+  font-size: 5vh;
+  margin-bottom: 2vh;
+  text-shadow: 2px  2px 1px black;
+}
+
+.service-explain{
+  font-size: 2.5vh;
+  line-height: 30px;
+  text-shadow: 2px  2px 1px black;
+}
+
+.apple-btn{
+  height: 9vh;
+}
+
+.google-btn{
+  height: 9vh;
+}
+/*ユーザーの悩みを指摘する部分*/
+.main-confusion{
+  padding: 5vh 15vw;
+}
+
+.main-confusion>.title{
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.main-confusion>.title::after{
+  content: '';
+  width: 400px;
+  height: 4px;
+  background-color: #07fc9e;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reason-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*アピールポイント*/
+.appeal-point{
+  width: 100vw;
+  background-image: image-url("BBQ1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #ffffff
+}
+
+.ap-title{
+  font-size: 5vh;
+  margin-bottom: 2vh;
+  text-shadow: 2px  2px 1px black;
+}
+
+.ap-explain {
+  font-size: 2.5vh;
+  line-height: 30px;
+  text-shadow: 2px  2px 1px black;
+}
+
+/* CAMP!CAMP!CAMP!の機能紹介部分*/
+
+.main-function{
+  padding: 5vh 15vw;
+}
+
+.main-function>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.main-function>.title::after {
+  content: '';
+  width: 400px;
+  height: 4px;
+  background-color: #07fc9e;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.function-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.ist-pict{
+  width: 20vw;
+  height: 20vh;
+
+}
+
+.sub-function{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  background-color: rgba(246, 250, 4, 0.637);
+  border-radius: 50%;
+}
+/*footer*/
+.footer-main{
+  width: 100vw;
+  background-image: image-url("BBQ2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #ffffff
+}
+
+.footer-title{
+  font-size: 5vh;
+  margin-bottom: 2vh;
+  text-shadow: 2px  2px 1px black;
+}
+
+.footer-download {
+  font-size: 2.5vh;
+  line-height: 30px;
+  text-shadow: 2px  2px 1px black;
+}

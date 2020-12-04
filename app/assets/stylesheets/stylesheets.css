@@ -1,0 +1,48 @@
+
+header {
+  width: 100vw;
+  height: 130px;
+  background-color: #f8faf9f8;
+}
+
+header.header div.header__bar.row h1.grid-6 {
+  font-size: 40px;
+  line-height: 70px;
+  float: left;
+  padding: 8px 20px;
+  color: #09f392;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px  2px 1px black;
+}
+
+header.header div.header__bar.row div.grid-6 {
+  float: right;
+  text-align: right;
+}
+
+ .row .grid-6 {
+   float: none;
+   width: 100% !important;
+   margin: 0 !important;
+   position: static !important;
+ }
+
+ .btn,
+header.header div.header__bar.row div.grid-6 a.post {
+  padding: 6px 20px;
+  font-size: 17px;
+  border: 3px solid #09f392;
+  color: #09f392;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  text-shadow: 1px  1px 1px black;
+}
+
+.btn:hover,
+header.header div.header__bar.row div.grid-6 a.post:hover {
+  border-color: #09f392;
+  color: #09f392;
+}

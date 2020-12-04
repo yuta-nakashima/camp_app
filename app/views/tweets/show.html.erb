@@ -1,0 +1,69 @@
+
+
+
+
+<%# タイトル%>
+<div>
+タイトル:  
+<%= @tweet.title%>
+</div>
+
+<%# 訪問日%>
+<div>日付
+<%= @tweet.start_time.strftime("%Y-%m-%d")%>
+</div>
+
+<%# メンバーとの写真%>
+<div>
+今日のキャンパー達
+</div>
+
+<%#= @tweet.image, id:"image" %>
+<%# if @tweet.image.attached? %>
+<%= image_tag @tweet.image %>
+<%#end%>
+
+<%# アイテム紹介%>
+<div>
+今日のアイテム
+</div>
+<% if @tweet.item_image.attached?%>
+  <%=image_tag @tweet.item_image, id:"item-photo"%>
+<% end %>
+
+<%# キャンプの様子%>
+<div>
+思い出を残そう！
+</div>
+<% if @tweet.images.attached?%>
+  <%= image_tag @tweet.images %>
+<% end %>
+
+<%#コメント%>
+<div>コメント
+<% @tweet.comments.each do |comment| %>
+  <% if comment.comment.present?%>
+    <%= comment.comment%>
+  <% end %>
+<% end %>
+</div>
+
+<%# キャンプ場の場所%>
+<div>
+訪問先
+<%= @tweet.member.prefecture %>
+<%= @tweet.member.place%>
+</div>
+
+<%# 欲しいものリスト%>
+<div>
+欲しいものリスト
+</div>
+<% @tweet.comments. each do |comment|%>
+  <% if comment.wanted_list.present?%>
+   <%= comment.wanted_list%>
+  <% end %>
+<% end %>
+
+<div>
+</div>
