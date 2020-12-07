@@ -2,26 +2,26 @@
  <div class="sign-up-in">
    <div class="sign-main">
 
-        <h2>sign up</h2>
+        <h2 class="sign-up-in-word">sign up</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "users/shared/error_messages", resource: resource %>
 
         <div class="field">
           <i class="fas fa-user-circle"></i>
-          <%= f.text_field :nickname, class:"input", id:"nickname", placeholder:"nickname", maxlength:"40" %>
+          <%= f.text_field :nickname, class:"input", id:"nickname", placeholder:"Nickname", maxlength:"40" %>
           <span>*</span><br />
         </div>
 
         <div class="field">
           <i class="fas fa-envelope"></i>
-          <%= f.email_field :email, placeholder: "email address", autofocus: true, autocomplete: "email" %>
+          <%= f.email_field :email, placeholder: "Email Address", autofocus: true, autocomplete: "email" %>
           <span>*</span><br />
         </div>
 
         <div class="field">
           <i class="fas fa-key"></i>
-          <%= f.password_field :password,placeholder: "password", autocomplete: "new-password" %>
+          <%= f.password_field :password,placeholder: "Password", autocomplete: "new-password" %>
           <span>*</span>
           <br /><% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters miminum)</em>
@@ -30,7 +30,7 @@
 
         <div class="field">
           <i class="fas fa-key"></i>
-          <%= f.password_field :password_confirmation,placeholder: "confirm password", autocomplete: "new-password" %>
+          <%= f.password_field :password_confirmation,placeholder: "Confirm Password", autocomplete: "new-password" %>
           <span>*</span>
         </div>
 

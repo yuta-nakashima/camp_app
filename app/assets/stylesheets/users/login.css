@@ -1,20 +1,34 @@
-.login-btn {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 50px;
+/*ログイン画面・新規登録画面*/
+@import url(https://fonts.googleapis.com/css2?family=Nerko+One&display=swap);
+
+.sign-up-in{
+  padding-top: 130px;
+  height: calc(100vh - 220px);
 }
 
-.login-red-btn {
-  width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
+.sign-up-in-word{
+  font-size: 50px;
 }
 
-.login-flash-message {
+.sign-main{
+  font-family: 'Nerko One', cursive;
+  font-size: 30px;
   text-align: center;
-  color: red;
+  margin: 0 380px;
+  background: linear-gradient(rgb(6, 214, 34),rgb(178, 238, 178)) ;
+  border: 2px solid black;
+  border-radius: 20px ;
+}
+
+.input{
+  width: 373px;
+}
+
+.field{
+  margin-top: 20px;
+  font-family: "M PLUS 1p";
+}
+
+.actions{
+  margin: 30px 0 10px 0;
 }

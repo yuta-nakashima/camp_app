@@ -1,136 +1,63 @@
+/*フォント*/
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+1p);
 
-.foo.delighter{
-  transition: all .3s ease-out;
-  transform: translateX(-100%);
-  opcity:0;
-}
-
-.foo.delighter.started{
-  transform: none;
-  opcity: 1;
-}
-
-.foo.delighter.started.ended{
-  border: solid red 10px;
-}
-
-
-.main-background{
-  background-image: image-url("nature.png");
+.index-body{
+  background-attachment: fixed;
+  background: radial-gradient(rgb(236, 235, 235),rgba(133, 245, 133, 0.911)) ;
+  /*background-image: image-url("tent4.png");
+  background-repeat: no-repeat;*/
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index:0;
-  position: relative;
-  /*overflow: hidden;*/
-  background-color: rgb(0,163,175);
-}
-
-.main-background::before{
-  content: '';
-  background: inherit;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(100px);
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
-}
-
-/*投稿機能*/
-.subtitle{
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  font-size: large;
-  font-weight: bold;
-  padding: 5px 10px;
   
 }
 
 
 /* 商品一覧 */
 
-.item-contents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.foto-contents{
   padding-top: 140px;
 }
 
-.item-contents>.title {
-  font-size: 5vh;
-  line-height: 1.4;
-  font-weight: bold;
+.title {
+  text-align: center;
+  padding-top: 40px;
+  font-family: "M PLUS 1p";
+  font-size: 30px;
 }
 
-.item-contents>.subtitle {
-  font-size: 3vh;
-  margin: 1vh 0;
-  text-decoration: none;
-  color: #3ccace;
-  font-weight: bold;
+.autoplay{
+  padding: 10px 30px;
 }
 
-.item-lists {
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.item-lists>.list {
-  width: 37vh;
-  padding: 1vw;
-}
-
-
-.item-img-content {
-  position: relative;
-}
-
-.item-img {
+.foto-img {
   width: 33vh;
   height: 33vh;
 }
 
-.item-info {
-  background-color: #FFF;
-  color: black;
-  padding: 1vw;
+/* キャンプ場名 */
+
+
+.list{
+  display: flex; 
 }
 
-.item-name {
-  font-size: 2.5vh;
+/*カレンダー*/
+.simple-calendar{
+  background-color: #ffffff;
+  margin: 30px;
+  font-family: "M PLUS 1p";
 }
 
-.item-price {
-  font-size: 1.5vh;
+.calendar-heading{
+  text-align: center;
+}
+
+/* google */
+
+
+/* 欲しいものリスト */
+
+.item-list {
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-
-
-.star-btn {
-  display: flex;
-  align-items: center;
-}
-
-.star-icon {
-  height: 2vh;
-  width: 2vh;
-  margin-right: 0.5vw;
-}
-
-.star-count {
-  font-size: 2vh;
-}
-
-/* //商品一覧 */

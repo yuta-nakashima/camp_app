@@ -1,16 +1,16 @@
 <div class="sign-up-in">
   <div class="sign-main">
-    <h2>sign in</h2>
+    <h2 class="sign-up-in-word">sign in</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
       <i class="fas fa-envelope"></i>
-        <%= f.email_field :email, placeholder: "email address",autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, placeholder: "Email Address",autofocus: true, autocomplete: "email" %>
       </div>
 
       <div class="field">
       <i class="fas fa-key"></i>
-        <%= f.password_field :password, placeholder: "password", autocomplete: "current-password" %>
+        <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password" %>
       </div>
 
       <% if devise_mapping.rememberable? %>

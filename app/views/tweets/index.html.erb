@@ -1,37 +1,31 @@
-
-
-    <div class='item-contents'>
-        <h2 class='title'>最近のキャンプ</h2>
-        <i class="fas fa-align-justify"></i>
-        <%= link_to '詳細', '#', class: "subtitle" %>
-        <ul class='item-lists'>
-          <% @tweets.each do |tweet|%>
-            <li class='list'>
-              <%= link_to tweet_path(tweet.id) do %>
-                <div class='item-img-content'>
-                  <% if tweet.image.attached?%>
-                    <div><%= image_tag tweet.image, class: "item-img" %></div>
-                    <div><%= tweet.title%></div>
-                  <% end %>
-                </div>
-              <%end%>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+<body class="index-body">
+  <div class='foto-contents'>
+    <h2 class='title'>最近のキャンプ</h2>
+    <div class="previews">
+      <ul class="autoplay">
+        <% @tweets.each do |tweet|%>
+          <li class='list'>
+            <%= link_to tweet_path(tweet.id) do %>
+              <% if tweet.image.attached?%>
+                <div><%= image_tag tweet.image, class: "foto-img" %></div>
+                <div><%= tweet.title%></div>
+              <% end %>
+            <%end%>
+          </li>
+        <% end %>
+      </ul>
     </div>
-<i class="fas fa-align-justify"></i>
+  </div>
 
-    <div class='item-contents'>
+<%# キャンプ場名 %>
+    <div class='place-contents'>
         <h2 class='title'>キャンプ場名</h2>
-        <ul class='item-lists'>
+        <ul class='place-lists'>
           <% @members.each do |member|%>
             <li class='list'>
               <%= link_to tweet_path(member.tweet_id) do %>
-                <div class='item-info'>
-                  <h3 class='item-name'>
-                    <%= member.place %>
-                  </h3>
+                <div class='place-name'>
+                  <h3> <%= member.place %> </h3>
                 </div>
               <%end%>
             </li>
@@ -39,30 +33,32 @@
         </ul>
       </div>
     </div>
-  <%= month_calendar events:@tweets do | date, tweets| %>
-    <%= date.day %>
 
-    <% tweets.each do |tweet| %>
-      <div>
-        <%= link_to tweet.title, tweet %>
-      </div>
+<%# カレンダー %>
+    <%= month_calendar events:@tweets do | date, tweets| %>
+      <%= date.day %>
+      <% tweets.each do |tweet| %>
+        <div>
+          <%= link_to tweet.title, tweet %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <div class='item-contents'>
+<%# 欲しいものリスト%>
+    <div class='wanted-contents'>
       <h2 class='title'>欲しいものリスト</h2>
-  <script async src="https://cse.google.com/cse.js?cx=ee7493856c23b6f7f"></script>
-  <div class="gcse-searchbox-only"></div>
-  <script async src="https://cse.google.com/cse.js?cx=ee7493856c23b6f7f"></script>
-  <div class="gcse-searchresults-only"></div>
-      <%= link_to '詳細', '#', class: "subtitle" %>
+
+  <%# google検索・結果表示 %>
+      <script async src="https://cse.google.com/cse.js?cx=ee7493856c23b6f7f"></script>
+      <div class="gcse-searchbox-only"></div>
+      <script async src="https://cse.google.com/cse.js?cx=ee7493856c23b6f7f"></script>
+      <%#<div class="gcse-searchresults-only"></div>
+
+  <%# リスト表示 %>
       <ul class='item-lists'>
         <% @comments.each do |comment|%>
           <li class='list'>
             <%= link_to tweet_path(comment.tweet_id) do %>
-              <div class='item-img-content'>
-                <%#= image_tag 'comment.wanted_list', class: "item-img" %>
-              </div>
               <div class='item-info'>
                 <h3 class='item-name'>
                 <% if comment.wanted_list.present? %>
@@ -76,22 +72,4 @@
       </ul>
     </div>
   </div>
-
 </body>
-
-
-
-<%#= link_to '#', class: 'purchase-btn' do %>
-  <span class='purchase-btn-text'>出品する</span>
-  <%#= image_tag '#' , size: '185x50' ,class: "purchase-btn-icon" %>
-<%# end %>
-
-<div class="previews">
-<div class="slider">
-    <%= image_tag "tent1.png" %>
-    <%= image_tag "tent1.png" %>
-    <%= image_tag "tent1.png" %>
-    <%= image_tag "tent1.png" %>
-    <%= image_tag "tent1.png" %>
-</div>
-</div>

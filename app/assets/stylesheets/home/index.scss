@@ -1,176 +1,101 @@
-a {
-  text-decoration: none;
+/*holderフォント*/
+@import url(https://fonts.googleapis.com/css2?family=Nerko+One&display=swap);
+/*area以下のフォント*/
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+1p);
+
+/*背景の設定*/
+body {
+  margin: 0;
 }
 
-.main {
-  background: #f8f8f8;
-}
-
-.title-contents {
+.holder{
+  height: 100vh;
   width: 100vw;
-  height: 400px;
+  position: relative;
   background-image: image-url("tent3.png");
-  background-size: over;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 10vh 15vw;
-  color: #ffffff
-}
-
-.service-title{
-  font-size: 5vh;
-  padding-top: 5px;
-  margin-bottom: 2vh;
-  text-shadow: 2px  2px 1px black;
-}
-
-.service-explain{
-  font-size: 2.5vh;
-  line-height: 30px;
-  text-shadow: 2px  2px 1px black;
-}
-
-.apple-btn{
-  height: 9vh;
-}
-
-.google-btn{
-  height: 9vh;
-}
-/*ユーザーの悩みを指摘する部分*/
-.main-confusion{
-  padding: 5vh 15vw;
-}
-
-.main-confusion>.title{
-  text-align: center;
-  font-size: 3.5vh;
-  font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
-}
-
-.main-confusion>.title::after{
-  content: '';
-  width: 400px;
-  height: 4px;
-  background-color: #07fc9e;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.reason-list{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/*アピールポイント*/
-.appeal-point{
-  width: 100vw;
-  background-image: image-url("BBQ1.png");
+  min-height: 100%;
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #ffffff
-}
-
-.ap-title{
-  font-size: 5vh;
-  margin-bottom: 2vh;
-  text-shadow: 2px  2px 1px black;
-}
-
-.ap-explain {
-  font-size: 2.5vh;
-  line-height: 30px;
-  text-shadow: 2px  2px 1px black;
-}
-
-/* CAMP!CAMP!CAMP!の機能紹介部分*/
-
-.main-function{
-  padding: 5vh 15vw;
-}
-
-.main-function>.title {
+  background-position: center;
+  z-index: 2;
   text-align: center;
-  font-size: 3.5vh;
-  font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
+
 }
 
-.main-function>.title::after {
-  content: '';
-  width: 400px;
-  height: 4px;
-  background-color: #07fc9e;
+
+/*テキストの指定*/
+.txt {
+  font-family: 'Nerko One', cursive;
+  font-size: 80px;
+  margin-top: 300px;
   position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+  color: blanchedalmond;
+  text-shadow:1px 0 5px black;
 }
 
-.function-list{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0;
 }
-
-
-.ist-pict{
-  width: 20vw;
-  height: 20vh;
-
+p {
+  font-size: 20px;
+  margin-top: 26px;
 }
+/*body-1*/
 
-.sub-function{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
+.area h2 {
+  font-family: "M PLUS 1p";
+  font-size: 45px;
   text-align: center;
-  line-height: 60px;
-  background-color: rgba(246, 250, 4, 0.637);
-  border-radius: 50%;
+  margin: 5px;
 }
-/*footer*/
-.footer-main{
+
+.holder2{
+  height: 100vh;
   width: 100vw;
-  background-image: image-url("BBQ2.png");
+  position: relative;
+  background-image: image-url("family.png");
+  min-height: 100%;
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #ffffff
+  background-position: center;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.footer-title{
-  font-size: 5vh;
-  margin-bottom: 2vh;
-  text-shadow: 2px  2px 1px black;
+.holder2::before{
+  content: '';
+  background: inherit;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
 }
 
-.footer-download {
-  font-size: 2.5vh;
-  line-height: 30px;
-  text-shadow: 2px  2px 1px black;
+.txt1 {
+  font-size: 50px;
+  margin-top: 100px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  color: #ffffff;
+  text-shadow: 1px 0 5px black;
 }
+
+.txt2 {
+  margin: 10px 0;
+  font-family: "Nico Moji";
+}
+

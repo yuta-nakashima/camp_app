@@ -6,15 +6,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/8185d53468.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
 
   <body>
     <div class="header">
+    <i class="fas fa-campground"></i>
+      <%= link_to "CAMP! CAMP! CAMP!", tweets_path(current_user.id), class:"icon"%>
+
       <div><ul class="bar">
         <% if user_signed_in? %>
           <li class="grid-7"><span>おかえりなさい<%= current_user.nickname %>さん</span>
@@ -30,7 +34,7 @@
             <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
             </div>
             <div class="g-3">
-            <%= link_to '新規投稿', new_tweet_path(current_user.id)%>
+            <%= link_to 'Tweet', new_tweet_path(current_user.id)%>
             </div>
           </div>
         <% else%>
@@ -40,6 +44,17 @@
           </div>
         <% end %>
     </div>    
+
     <%= yield %>
+    
+    <div class='footer'>
+      <%= link_to "© CAMP! CAMP! CAMP!", tweets_path(current_user.id), class:"icon2"%>
+        <div class='details'>
+            <div><%= link_to '会社概要（運営会社)', "#", class: "footer-link" %></div>
+            <div><%= link_to 'プライバシーポリシー', "#", class: "footer-link" %></div>
+            <div><%= link_to 'お知らせ', "#", class: "footer-link" %></div>
+            <div><%= link_to '利用規約', "#", class: "footer-link" %></div>
+        </div>
+    </div>
   </body>
 </html>

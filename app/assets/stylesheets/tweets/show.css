@@ -1,0 +1,7 @@
+
+
+.show-body{
+  background-attachment: fixed;
+  background: radial-gradient(rgb(236, 235, 235),rgba(133, 245, 133, 0.911)) ;
+  background-size: cover;
+}

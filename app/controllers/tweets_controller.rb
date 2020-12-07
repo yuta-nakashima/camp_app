@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-#before_action :form_params, only: :show
+before_action :form_params, only: :show
 
   def index
     user = User.find(current_user.id)
@@ -24,7 +24,11 @@ class TweetsController < ApplicationController
 
   def show
     @tweet = Tweet.find(params[:id])
+    @prefecture = Prefecture.find(params[:id])
   end
+
+def edit
+end
 
 private
 
