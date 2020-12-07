@@ -1,11 +1,68 @@
+
+.foo.delighter{
+  transition: all .3s ease-out;
+  transform: translateX(-100%);
+  opcity:0;
+}
+
+.foo.delighter.started{
+  transform: none;
+  opcity: 1;
+}
+
+.foo.delighter.started.ended{
+  border: solid red 10px;
+}
+
+
+.main-background{
+  background-image: image-url("nature.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index:0;
+  position: relative;
+  /*overflow: hidden;*/
+  background-color: rgb(0,163,175);
+}
+
+.main-background::before{
+  content: '';
+  background: inherit;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(100px);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+
+/*投稿機能*/
+.subtitle{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+  padding: 5px 10px;
+  
+}
+
+
 /* 商品一覧 */
 
 .item-contents {
-  background-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
+  padding-top: 140px;
 }
 
 .item-contents>.title {
@@ -32,7 +89,6 @@
 .item-lists>.list {
   width: 37vh;
   padding: 1vw;
-  background-color: #FFF;
 }
 
 
@@ -44,22 +100,6 @@
   width: 33vh;
   height: 33vh;
 }
-
-.sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
-}
-
-.sold-out>span {
-  color: #FFF;
-  font-size: 45px;
-  font: bold;
-}
-
 
 .item-info {
   background-color: #FFF;

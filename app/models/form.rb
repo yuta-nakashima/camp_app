@@ -12,7 +12,7 @@ end
 
   def save
     tweet = Tweet.create(start_time: start_time, user_id: user_id, title: title, image: image, images: images, item_image: item_image)
-    Member.create(prefecture: prefecture, place: place, tweet_id: tweet.id)
-    Comment.create(comment: comment, tweet_id: tweet.id,wanted_list: wanted_list)
+    Member.create(prefecture: prefecture, place: place, tweet_id: tweet.id, user_id: user_id)
+    Comment.create(comment: comment, tweet_id: tweet.id,wanted_list: wanted_list, user_id: user_id)
   end
 end

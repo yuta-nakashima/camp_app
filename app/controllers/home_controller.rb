@@ -7,6 +7,9 @@ class HomeController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def basic_auth

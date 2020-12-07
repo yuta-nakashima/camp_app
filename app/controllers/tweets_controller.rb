@@ -2,9 +2,10 @@ class TweetsController < ApplicationController
 #before_action :form_params, only: :show
 
   def index
-    @tweets = Tweet.includes(:user)
-    @comments = Comment.includes(:tweet)
-    @members = Member.includes(:tweet)
+    user = User.find(current_user.id)
+    @tweets = user.tweets
+    @members = user.members
+    @comments = user.comments
   end
 
   def new

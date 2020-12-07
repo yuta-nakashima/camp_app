@@ -4,6 +4,7 @@ class CreateMembers < ActiveRecord::Migration[6.0]
       t.integer    :prefecture,  null: false
       t.string     :place,       null: false
       t.references :tweet,       null: false,foreign_key: true
+      t.references :user,        null: false,foreign_key: true
       t.timestamps
     end
   end
