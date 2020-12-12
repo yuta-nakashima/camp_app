@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_145932) do
   create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
-    t.string "content_type"
+    t.string "content_type", default: ""
     t.text "metadata"
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
@@ -46,30 +46,19 @@ ActiveRecord::Schema.define(version: 2020_12_03_145932) do
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "comment", null: false
-    t.string "wanted_list", null: false
-    t.bigint "tweet_id", null: false
-    t.bigint "user_id", null: false
+    t.text "comment"
+    t.integer "user_id"
+    t.integer "tweet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["tweet_id"], name: "index_comments_on_tweet_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "prefecture", null: false
-    t.string "place", null: false
-    t.bigint "tweet_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["tweet_id"], name: "index_members_on_tweet_id"
-    t.index ["user_id"], name: "index_members_on_user_id"
   end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "start_time", null: false
     t.string "title", null: false
+    t.string "wanted_list"
+    t.integer "prefecture_id", null: false
+    t.string "place", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -90,7 +79,4 @@ ActiveRecord::Schema.define(version: 2020_12_03_145932) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "comments", "users"
-  add_foreign_key "members", "tweets"
-  add_foreign_key "members", "users"
 end

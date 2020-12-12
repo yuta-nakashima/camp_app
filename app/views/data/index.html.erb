@@ -1,0 +1,19 @@
+<body>
+  <div class="data-index">
+    <div class="all-photo">
+      <% @tweet.each do |tweet|%>
+        <%= link_to tweet_path(tweet.id) do %>
+          <%= image_tag tweet.image%>
+          <% if tweet.item_image.attached?%>
+          <%= image_tag tweet.item_image%>
+          <%end%>
+          <% tweet.images.each do |memory|%>
+          <% if memory.present?%>
+            <%= image_tag memory%>
+          <%end%>
+          <%end%>
+        <%end%>
+      <%end%>
+    </div>
+  </div>
+</body>

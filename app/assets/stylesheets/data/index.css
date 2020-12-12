@@ -1,0 +1,22 @@
+
+.data-index{
+  background-attachment: fixed;
+  background: radial-gradient(rgb(236, 235, 235),rgba(133, 245, 133, 0.911)) ;
+  background-size: cover;
+
+
+}
+
+.all-photo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 140px 0px 0 0px;
+  width: 100%;
+}
+
+div.all-photo img{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}

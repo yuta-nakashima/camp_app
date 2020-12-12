@@ -3,12 +3,12 @@
     <h2 class='title'>最近のキャンプ</h2>
     <div class="previews">
       <ul class="autoplay">
-        <% @tweets.each do |tweet|%>
-          <li class='list'>
+        <% @tweets.last(10).each do |tweet|%>
+          <li class='foto-list'>
             <%= link_to tweet_path(tweet.id) do %>
               <% if tweet.image.attached?%>
                 <div><%= image_tag tweet.image, class: "foto-img" %></div>
-                <div><%= tweet.title%></div>
+                <div class="foto-content"><%= tweet.title%></div>
               <% end %>
             <%end%>
           </li>
@@ -18,51 +18,45 @@
   </div>
 
 <%# キャンプ場名 %>
-    <div class='place-contents'>
-        <h2 class='title'>キャンプ場名</h2>
-        <ul class='place-lists'>
-          <% @members.each do |member|%>
-            <li class='list'>
-              <%= link_to tweet_path(member.tweet_id) do %>
-                <div class='place-name'>
-                  <h3> <%= member.place %> </h3>
-                </div>
-              <%end%>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+  <div class='place-contents'>
+      <h2 class='title'>キャンプ場名</h2>
+      <ul class='place-lists'>
+        <% @tweets.last(10).each do |tweet|%>
+          <li class='list'>
+            <%= link_to tweet_path(tweet.id) do %>
+              <div class='place-name'>
+                <h3> <%= tweet.place %> </h3>
+              </div>
+            <%end%>
+          </li>
+        <% end %>
+      </ul>
     </div>
+  </div>
 
 <%# カレンダー %>
-    <%= month_calendar events:@tweets do | date, tweets| %>
-      <%= date.day %>
-      <% tweets.each do |tweet| %>
-        <div>
-          <%= link_to tweet.title, tweet %>
-        </div>
-      <% end %>
+  <%= month_calendar events:@tweets do | date, tweets| %>
+    <%= date.day %>
+    <% tweets.each do |tweet| %>
+      <div>
+        <%= link_to tweet.title, tweet, class:"calender-contents" %>
+      </div>
     <% end %>
+  <% end %>
 
 <%# 欲しいものリスト%>
-    <div class='wanted-contents'>
-      <h2 class='title'>欲しいものリスト</h2>
-
-  <%# google検索・結果表示 %>
-      <script async src="https://cse.google.com/cse.js?cx=ee7493856c23b6f7f"></script>
-      <div class="gcse-searchbox-only"></div>
-      <script async src="https://cse.google.com/cse.js?cx=ee7493856c23b6f7f"></script>
-      <%#<div class="gcse-searchresults-only"></div>
+  <div class='wanted-contents'>
+    <h2 class='title'>欲しいものリスト</h2>
 
   <%# リスト表示 %>
       <ul class='item-lists'>
-        <% @comments.each do |comment|%>
+        <% @tweets.each do |tweet|%>
           <li class='list'>
-            <%= link_to tweet_path(comment.tweet_id) do %>
+            <%= link_to tweet_path(tweet.id) do %>
               <div class='item-info'>
                 <h3 class='item-name'>
-                <% if comment.wanted_list.present? %>
-                  <%= comment.wanted_list %>
+                <% if tweet.wanted_list.present? %>
+                  <%= tweet.wanted_list %>
                 <% end %>
                 </h3>
               </div>
@@ -72,4 +66,17 @@
       </ul>
     </div>
   </div>
+
+  <%# google検索・結果表示 %>
+  <div class="google">
+    <script async src="https://cse.google.com/cse.js?cx=ee7493856c23b6f7f"></script>
+    <div class="gcse-searchbox-only"></div>
+    <div class="google-result">
+      <script async src="https://cse.google.com/cse.js?cx=ee7493856c23b6f7f"></script>
+      <div class="gcse-searchresults-only"></div>
+    </div>
+  </div>
+
+
+
 </body>

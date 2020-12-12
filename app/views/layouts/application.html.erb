@@ -17,7 +17,11 @@
   <body>
     <div class="header">
     <i class="fas fa-campground"></i>
+    <% if user_signed_in?%>
       <%= link_to "CAMP! CAMP! CAMP!", tweets_path(current_user.id), class:"icon"%>
+    <% else %>
+      <%= link_to "CAMP! CAMP! CAMP!", root_path, class:"icon"%>
+    <% end %>
 
       <div><ul class="bar">
         <% if user_signed_in? %>
@@ -25,17 +29,21 @@
         <% end %>
       </ul> 
       </div>
-        <% if user_signed_in? %>      
+        <% if user_signed_in? %>
             <div class="grid-8">
             <div class="g-1">
-            <%= link_to "My page", edit_user_registration_path(current_user.id) %>
-            </div>
-            <div class="g-2">
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+              <%= link_to "Profile Edit", edit_user_registration_path(current_user.id) %>
             </div>
             <div class="g-3">
-            <%= link_to 'Tweet', new_tweet_path(current_user.id)%>
+              <%= link_to 'Tweet', new_tweet_path(current_user.id)%>
             </div>
+            <div class="g-3">
+              <%= link_to 'All My Photos', data_path%>
+            </div>
+            <div class="g-2">
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+            </div>
+            
           </div>
         <% else%>
           <div class="grid-9">
@@ -48,7 +56,11 @@
     <%= yield %>
     
     <div class='footer'>
+    <% if user_signed_in?%>
       <%= link_to "© CAMP! CAMP! CAMP!", tweets_path(current_user.id), class:"icon2"%>
+    <% else %>
+      <%= link_to "© CAMP! CAMP! CAMP!", root_path, class:"icon2"%>
+    <% end %>
         <div class='details'>
             <div><%= link_to '会社概要（運営会社)', "#", class: "footer-link" %></div>
             <div><%= link_to 'プライバシーポリシー', "#", class: "footer-link" %></div>

@@ -60,4 +60,5 @@ gem "mini_magick"
 gem "image_processing", "~>1.2"
 gem 'simple_calendar', '~> 2.0'
 gem 'devise-i18n'
-gem 'bxslider-rails'
+gem 'kaminari'
+gem 'carrierwave'

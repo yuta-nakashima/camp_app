@@ -1,27 +1,33 @@
 /*ログイン画面・新規登録画面*/
 @import url(https://fonts.googleapis.com/css2?family=Nerko+One&display=swap);
 
+
 .sign-up-in{
-  padding-top: 130px;
-  height: calc(100vh - 220px);
+  padding-top: 140px;
+  background-attachment: fixed;
+  background: radial-gradient(rgb(236, 235, 235),rgba(133, 245, 133, 0.911)) ;
+  background-size: cover;
+  height: 70vh;
 }
 
 .sign-up-in-word{
   font-size: 50px;
+  
 }
 
 .sign-main{
   font-family: 'Nerko One', cursive;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
-  margin: 0 380px;
+  margin: 10px 350px;
   background: linear-gradient(rgb(6, 214, 34),rgb(178, 238, 178)) ;
   border: 2px solid black;
   border-radius: 20px ;
+  
 }
 
 .input{
-  width: 373px;
+  width: 250px;
 }
 
 .field{

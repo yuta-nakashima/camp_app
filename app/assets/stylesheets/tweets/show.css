@@ -1,7 +1,112 @@
-
-
 .show-body{
   background-attachment: fixed;
   background: radial-gradient(rgb(236, 235, 235),rgba(133, 245, 133, 0.911)) ;
   background-size: cover;
+}
+
+.show-main{
+  font-family: "M PLUS 1p";
+  text-align: center;
+  padding-top: 150px;
+}
+
+/* 訪問日/タイトル/キャンプ場の場所 */
+.date-title{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/*メンバーとの写真*/
+.camping-title{
+  font-size: 20px;
+}
+
+.camping-member{
+  border-top: 5px solid black;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+
+/*アイテム紹介*/
+.todays-item{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.item-photo-show{
+  border-top: 5px solid black;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+
+/*キャンプの様子*/
+.camping-memory{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.memory-photo-show{
+  border-top: 5px solid black;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+
+/*コメント*/
+.show-memo{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.comment-show{
+  border-top: 5px solid black;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+/*欲しいものリスト*/
+.list-show{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.show-wanted{
+  border-top: 5px solid black;
+  border-radius: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+/*おまけコメント*/
+.balloon3-right-btm {
+  position: relative;
+  display: inline-block;
+  margin: 30px 15px 30px 0;
+  padding: 0 5px;
+  width: 500px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: 5px solid black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  font-family: 'Nerko One', cursive;
+  font-size: 30px;
+}
+
+/* ボタン */
+.next-back-home{
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Nerko One', cursive;
+  font-size: 25px; 
+  margin-bottom: 20px;
 }

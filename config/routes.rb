@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'home/index'
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',
     passwords:     'admins/passwords',
@@ -10,11 +9,12 @@ Rails.application.routes.draw do
     passwords:     'users/passwords',
     registrations: 'users/registrations'
   }
+  get 'home/index'
   root to: 'home#index'
-  #get 'home/index'
-  #root to: "infos#index"
   resources :users
-  resources :tweets 
-  resources :infos, only: :index
+  resources :data, only: :index
+  resources :tweets do
+    resources :comments, only: [:create, :destroy]
+  end
 
 end

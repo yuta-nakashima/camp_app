@@ -1,70 +1,61 @@
-<div class= "new-main">
-<%=form_with url: tweets_path(current_user.id), local: true do |f|%>
+<body class="new-body">
+  <div class= "main-new">
+    <div class= "main-new2">
+      <%=form_with model:@tweet, local: true do |f|%>
 
-  <%# タイトル%>
-  <div>
-  タイトル
-  </div>
-  <%= f.text_field :title%>
+        <%# タイトル%>
+        <div class="show-title">
+        <br/>タイトル
+        <%= f.text_field :title, placeholder:"今回のキャンプを一言で！"%>
+        </div>
 
+        <%# 訪問日%>
+        <div class="show-title"><br/>日付
+          <%= f.date_field :start_time, id:"start-time", class: "date-space"%>
+        </div>
 
-  <%# 訪問日%>
-  <div>日付
-    <%= f.date_field :start_time, id:"start-time"%>
-  </div>
+        <%# メンバーとの写真%>
+        <div class="show-title-sub">
+        <br/>今日のキャンパー達
+        </div>
+        <div id="image-list"></div>
+          <%= f.file_field :image, id:"image" %>
 
-  <%# メンバーとの写真%>
-  <div>
-  今日のキャンパー達
-  </div>
-  <div>
-  クリックしてアップロード
-  </div>
-  <%= f.file_field :image, id:"image" %>
-    <%# if @tweet.image.attached? %>
-     <%#= image_tag @tweet.image %>
-    <%#end%>
+        <%# アイテム紹介%>
+        <div class="show-title-sub">
+        <br/>今日のアイテム
+        </div>
+        <div id="image-item"></div>
+          <%=f.file_field :item_image, id:"item-photo" %>
 
-  <%# アイテム紹介%>
-  <div>
-  今日のアイテム
-  </div>
-  <div>
-  クリックしてアップロード
-  </div>
-  <%=f.file_field :item_image, id:"item-photo"%>
+        <%# キャンプの様子%>
+        <div class="show-title-sub">
+        <br/>思い出を残そう！
+        </div>
+        <div class="image-box"></div>
+          <%= f.file_field :images ,name: "tweet[images][]",multiple: true, id:"tweet_image"%>
+          <% @tweet.images.each do |memory|%>
+            <%= image_tag memory, class:"images"%>
+          <%end%>
 
-  <%# キャンプの様子%>
-  <div>
-  思い出を残そう！
-  </div>
-  <div>
-  クリックしてアップロード
-  </div>
-  <%= f.file_field :images, id:"images" %>
-    <%# if @tweet.images.attached?%>
-    <%#end%>
+        <%# キャンプ場の場所%>
+        <div class="show-title">
+        <br/>訪問先
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank:"都道府県"}) %>
+        <div>
+          <%= f.text_field :place, placeholder:"キャンプ場名", id:"place", class: "camping-place"%>
+        </div>
 
-  <%#コメント%>
-  <div>コメント
-  <%= f.text_area :comment, id:"comment"%>
+        <%# 欲しいものリスト%>
+        <div class="show-title">
+         <br/> 欲しいものリスト
+        </div>
+        <%= f.text_field :wanted_list, placeholder:"欲しいなと思ったもの", class: "wanted-list"%>
+        <div class="submit-button">
+        <%= f.submit%>
+        </div>
+      <%end%>
+    </div>
   </div>
-  
-  <%# キャンプ場の場所%>
-  <div>
-  訪問先
-  </div>
-  <%= f.collection_select(:prefecture, Prefecture.all, :id, :name, {include_blank:"---"}) %>
-  <%= f.text_field :place, id:"place"%>
-
-  <%# 欲しいものリスト%>
-  <div>
-  欲しいものリスト
-  </div>
-  <%= f.text_field :wanted_list%>
-  
-  <div>
-  </div>
-  <%= f.submit%>
-<%end%>
-</div>
+</body>

@@ -1,0 +1,47 @@
+/*フォント*/
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+1p);
+
+.new-body{
+  background-attachment: fixed;
+  background: radial-gradient(rgb(236, 235, 235),rgba(133, 245, 133, 0.911)) ;
+  background-size: cover;
+}
+
+.main-new{
+  padding-top: 150px;
+  font-family: "M PLUS 1p";
+
+}
+.main-new2{
+  border: 5px solid black;
+  border-radius: 20px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.show-title{
+  margin: 10px 0;
+}
+
+.date-space{
+  margin: 0 0 10px 30px;
+  padding-right: 30px;
+}
+
+.comment-text{
+  padding-right: 60px;
+}
+
+.camping-place{
+  padding-right: 80px;
+  margin-top: 5px;
+}
+
+.wanted-list{
+  padding-right: 80px;
+}
+
+.submit-button{
+  margin: 20px 0 ;
+  font-size: large;
+}
