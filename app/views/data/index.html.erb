@@ -5,12 +5,12 @@
         <%= link_to tweet_path(tweet.id) do %>
           <%= image_tag tweet.image%>
           <% if tweet.item_image.attached?%>
-          <%= image_tag tweet.item_image%>
+            <%= image_tag tweet.item_image%>
           <%end%>
-          <% tweet.images.each do |memory|%>
-          <% if memory.present?%>
-            <%= image_tag memory%>
-          <%end%>
+          <% if tweet.memory_images.attached?%>
+            <% tweet.memory_images.each do |memory_image|%>
+              <%= image_tag memory_image%>
+            <%end%>
           <%end%>
         <%end%>
       <%end%>

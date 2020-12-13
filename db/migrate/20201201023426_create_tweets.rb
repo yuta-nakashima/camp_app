@@ -6,7 +6,7 @@ class CreateTweets < ActiveRecord::Migration[6.0]
       t.string      :wanted_list
       t.integer     :prefecture_id,   null: false
       t.string      :place,           null: false
-      t.references :user
+      t.references  :user ,           null: false
       t.timestamps
     end
   end

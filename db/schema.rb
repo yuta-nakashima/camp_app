@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_145932) do
   create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
-    t.string "content_type", default: ""
+    t.string "content_type"
     t.text "metadata"
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_145932) do
     t.string "wanted_list"
     t.integer "prefecture_id", null: false
     t.string "place", null: false
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_tweets_on_user_id"

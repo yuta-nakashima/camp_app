@@ -34,9 +34,11 @@
       最高のキャンプ！！
     </div>
     <div class="memory-photo-show">
-    <% @tweet.images. each do |tweet|%>
-      <%= image_tag tweet.variant(resize:"500x500")%>
-    <%end%>
+      <% if @tweet.memory_images.attached?%>
+        <% @tweet.memory_images. each do |tweet|%>
+          <%= image_tag tweet.variant(resize:"500x500")%>
+        <%end%>
+      <%end%>
     </div>
 
   <%# 欲しいものリスト%>
