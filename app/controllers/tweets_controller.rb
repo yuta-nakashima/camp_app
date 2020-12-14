@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   before_action :user_signed
   before_action :tweets_params, only: [:show, :edit, :update, :destroy]
+  before_action :search_tweets, only: [:index, :search]
   
     def index
       user = User.find(current_user.id)
@@ -44,6 +45,17 @@ class TweetsController < ApplicationController
         redirect_to tweets_path(current_user.id)
       end
     end
+
+    def search
+      @results = @p.result.includes(:user)
+      @tweets = Tweet.includes(:user)
+    end
+
+    def self.search(search)
+      if serch !=""
+        Tweet.where("place LIKE(?)", "%#{search}%")
+      end
+    end
   
     private
   
@@ -59,6 +71,10 @@ class TweetsController < ApplicationController
       unless user_signed_in?
         redirect_to new_user_session_path
       end
+    end
+
+    def search_tweets
+      @p = Tweet.ransack(params[:q])
     end
   
   

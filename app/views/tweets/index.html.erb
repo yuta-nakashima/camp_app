@@ -52,15 +52,13 @@
       <ul class='item-lists'>
         <% @tweets.each do |tweet|%>
           <li class='list'>
-            <%= link_to tweet_path(tweet.id) do %>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                <% if tweet.wanted_list.present? %>
-                  <%= tweet.wanted_list %>
-                <% end %>
-                </h3>
-              </div>
-            <%end%>
+            <div class='item-info'>
+              <h3 class='item-name'>
+              <% if tweet.wanted_list.present? %>
+                <%= tweet.wanted_list %>
+              <% end %>
+              </h3>
+            </div>
           </li>
         <% end %>
       </ul>
@@ -76,7 +74,4 @@
       <div class="gcse-searchresults-only"></div>
     </div>
   </div>
-
-
-
 </body>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   get 'home/index'
+  get "tweets/search"
   root to: 'home#index'
   resources :users
   resources :data, only: :index

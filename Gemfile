@@ -62,8 +62,5 @@ gem 'simple_calendar', '~> 2.0'
 gem 'devise-i18n'
 gem 'kaminari'
 gem 'carrierwave'
-group :tools do
-gem "squasher", ">=0.6.0"
-gem "capistrano"
 gem "rubocop"
-end
+gem "ransack"

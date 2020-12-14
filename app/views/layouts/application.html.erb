@@ -30,26 +30,29 @@
       </ul> 
       </div>
         <% if user_signed_in? %>
-            <div class="grid-8">
-            <div class="g-1">
-              <%= link_to "Profile Edit", edit_user_registration_path(current_user.id) %>
-            </div>
-            <div class="g-3">
-              <%= link_to 'Tweet', new_tweet_path(current_user.id)%>
-            </div>
-            <div class="g-3">
-              <%= link_to 'All My Photos', data_path%>
-            </div>
-            <div class="g-2">
-              <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-            </div>
-            
-          </div>
+            <ul class="grid-8">
+              <li class="g-1">
+                <%= link_to "Profile Edit", edit_user_registration_path(current_user.id) %>
+              </li>
+              <li class="g-3">
+                <%= link_to 'Tweet', new_tweet_path(current_user.id)%>
+              </li>
+              <li class="g-3">
+                <%= link_to 'All My Photos', data_path%>
+              </li>
+              <li class="g-3">
+                <%= link_to "Search",tweets_search_path %>
+              </li>
+              <li class="g-3">
+                <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+              
         <% else%>
-          <div class="grid-9">
-            <div class="g-4"><%= link_to "Sign In", new_user_session_path, class: "post" %></div>
-            <div class="g-5"><%= link_to "Sign Up", new_user_registration_path, class: "post" %></div>
-          </div>
+          <ul class="grid-9">
+            <li class="g-4"><%= link_to "Sign In", new_user_session_path, class: "post" %></li>
+            <li class="g-5"><%= link_to "Sign Up", new_user_registration_path, class: "post" %></li>
+          </ul>
         <% end %>
     </div>    
 

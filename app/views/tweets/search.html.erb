@@ -1,0 +1,43 @@
+<body class="new-body">
+  <div class= "main-new">
+    <div class= "main-new2">
+      <div class="search-title">
+        キャンプ場検索一覧
+      </div>
+      <ul class="search">
+        <%= search_form_for @p, url:tweets_search_path do |f|%>
+        <li class= "search-list">
+          <%= f.label  "都道府県"%>
+          <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: "全て"%>
+        </li>
+        <li class= "search-list"><%= f.search_field :place_cont, placeholder: "キャンプ場名" %></li>
+        <li class= "search-button"><%= f.submit "検索"%></li>
+        <%end%>
+      </ul>
+
+      <ul class="search-result">
+        <%if @results.length !=0%>
+          <% @results.each do |result|%>
+            <li class="search-result-list">
+            <%= link_to tweet_path(result.id), class:"result-link" do %>
+              <%= result.prefecture.name%>
+              <%= result.place%>
+            </li>
+            <%end%>
+          <%end%>
+        <%else%>
+          <h1>
+          検索結果：該当なし
+          </h1>
+          <br/>
+          <% @tweets.each do |tweet|%>
+            <li class="search-result-list">
+              <%= tweet.prefecture.name%>
+              <%= tweet.place%>
+            </li>
+          <%end%>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</body>

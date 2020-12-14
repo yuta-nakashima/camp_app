@@ -4,10 +4,11 @@
 
 .sign-up-in{
   padding-top: 140px;
-  background-attachment: fixed;
   background: radial-gradient(rgb(236, 235, 235),rgba(133, 245, 133, 0.911)) ;
   background-size: cover;
-  height: 70vh;
+  height: 76vh;
+  display: flex;
+  justify-content: center;
 }
 
 .sign-up-in-word{
@@ -19,11 +20,11 @@
   font-family: 'Nerko One', cursive;
   font-size: 20px;
   text-align: center;
-  margin: 10px 350px;
   background: linear-gradient(rgb(6, 214, 34),rgb(178, 238, 178)) ;
   border: 2px solid black;
   border-radius: 20px ;
-  
+  display: table;
+  padding: 30px;
 }
 
 .input{
