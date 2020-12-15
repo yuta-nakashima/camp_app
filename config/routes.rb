@@ -9,9 +9,9 @@ Rails.application.routes.draw do
     passwords:     'users/passwords',
     registrations: 'users/registrations'
   }
-  get 'home/index'
+  get 'homes/index'
   get "tweets/search"
-  root to: 'home#index'
+  root to: 'homes#index'
   resources :users
   resources :data, only: :index
   resources :tweets do

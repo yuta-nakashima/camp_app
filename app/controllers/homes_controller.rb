@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class HomesController < ApplicationController
   before_action :basic_auth
 
   def index
@@ -17,5 +17,4 @@ class HomeController < ApplicationController
       username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
     end
   end
-
 end

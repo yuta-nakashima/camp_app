@@ -48,3 +48,9 @@
   margin: 20px 0 ;
   font-size: large;
 }
+
+div.image-size img{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}

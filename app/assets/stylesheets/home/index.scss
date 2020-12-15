@@ -96,6 +96,21 @@ p {
   text-shadow: 1px 0 5px black;
 }
 
+.foo.delighter{
+  transition: all .10s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.foo.delighter.started{
+  transform: none;
+  opacity: 1;
+}
+
+.foo.delighter.started.ended{
+  border: solid red 10px;
+}
+
 .txt2 {
   margin: 10px 0;
   font-family: "Nico Moji";
