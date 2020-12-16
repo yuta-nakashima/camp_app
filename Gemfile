@@ -63,5 +63,5 @@ gem "image_processing", "~>1.2"
 gem 'simple_calendar', '~> 2.0'
 gem 'devise-i18n'
 gem 'kaminari'
-gem 'carrierwave'
 gem "ransack"
+gem "aws-sdk-s3", require: false
