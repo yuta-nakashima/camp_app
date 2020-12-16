@@ -57,19 +57,21 @@
     </div>
     <div class="comment-show">
       <%= form_with model: [@tweet, @comment], local: true do |f|%>
-        <%= f.text_area :comment, placeholder: "コメント"%>
+        <%= f.text_area :comment, placeholder: "思い出メモ"%>
+        <br/>
         <%= f.submit "comment"%>
       <% end %>
+     </div>
       <%if @comments.present? %>
         <% @comments.each do |comment|%>
           <p>
-            <strong><%= link_to comment.user.nickname,"/users/#{comment.user_id}" %></strong>
-            <%= comment.comment%>
-            <%= link_to "delete", tweet_comment_path(comment.id), method: :delete %>
+            <span class="comment-contents">
+              <%= comment.comment%>
+            </span>
+            <%= link_to "✖︎", tweet_comment_path(comment.id), method: :delete %>
           </p>
         <%end%>
       <%end%>
-    </div>
 
 
 

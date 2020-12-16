@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   get 'homes/index'
   get "tweets/search"
   root to: 'homes#index'
-  resources :users
+  resources :users do
+    get :following, :followers, :user_tweets
+  end
+  resources :relationships, only: [:create, :destroy]
   resources :data, only: :index
   resources :tweets do
     resources :comments, only: [:create, :destroy]

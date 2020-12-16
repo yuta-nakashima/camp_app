@@ -82,6 +82,11 @@
   font-size: 20px;
 }
 
+/*コメント*/
+.comment-contents{
+  margin-right: 30px;
+}
+
 /*おまけコメント*/
 .balloon3-right-btm {
   position: relative;

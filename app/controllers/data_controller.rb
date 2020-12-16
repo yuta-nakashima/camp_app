@@ -7,10 +7,8 @@ class DataController < ApplicationController
   end
 
   private
-  def user_signed
-    unless user_signed_in?
-      redirect_to new_user_session_path
-    end
-  end
 
+  def user_signed
+    redirect_to new_user_session_path unless user_signed_in?
+  end
 end
