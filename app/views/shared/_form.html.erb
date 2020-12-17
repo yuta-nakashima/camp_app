@@ -3,6 +3,8 @@
     <div class= "main-new2">
       <%=form_with model:@tweet, local: true do |f|%>
 
+      <%= render partial:'shared/error_messages', locals: {model: f.object} %>
+
         <%# タイトル%>
         <div class="main-title">
         <br/>タイトル
@@ -10,7 +12,8 @@
         </div>
 
         <%# 訪問日%>
-        <div class="main-title"><br/>日付
+        <div class="main-title">
+        <br/>日付
           <%= f.date_field :start_time, id:"start-time", class: "date-space"%>
         </div>
 

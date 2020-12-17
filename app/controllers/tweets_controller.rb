@@ -15,8 +15,7 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.create(tweet_params)
-    @tweet.save!
-    if @tweet.valid?
+    if @tweet.save
       redirect_to tweets_path(current_user.id)
     else
       render :new
