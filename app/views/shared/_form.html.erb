@@ -42,7 +42,9 @@
         <div class="main-title">
         <br/>訪問先
         </div>
+        <div>
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank:"都道府県"}) %>
+        </div>
         <div>
           <%= f.text_field :place, placeholder:"キャンプ場名", id:"place", class: "camping-place"%>
         </div>

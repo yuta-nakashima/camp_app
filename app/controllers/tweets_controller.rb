@@ -5,7 +5,6 @@ class TweetsController < ApplicationController
 
   def index
     user = User.find(current_user.id)
-    # tweets = Tweet.with_attached_image
     @tweets = user.tweets.order(id: 'DESC')
   end
 

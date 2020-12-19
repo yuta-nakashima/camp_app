@@ -21,7 +21,7 @@
   <div class='place-contents'>
       <h2 class='title'>キャンプ場名</h2>
       <ul class='place-lists'>
-        <% @tweets.last(10).each do |tweet|%>
+        <% @tweets.last(6).each do |tweet|%>
           <li class='list'>
             <%= link_to tweet_path(tweet.id) do %>
               <div class='place-name'>
@@ -49,19 +49,15 @@
     <h2 class='title'>欲しいものリスト</h2>
 
   <%# リスト表示 %>
-      <ul class='item-lists'>
-        <% @tweets.each do |tweet|%>
-          <li class='list'>
+      <div class='item-lists'>
+        <% @tweets.last(8).select do |tweet|%>
+          <% if tweet.wanted_list!="" %>
             <div class='item-info'>
-              <h3 class='item-name'>
-              <% if tweet.wanted_list.present? %>
-                <%= tweet.wanted_list %>
-              <% end %>
-              </h3>
+              <%= tweet.wanted_list %>
             </div>
-          </li>
-        <% end %>
-      </ul>
+          <%end%>
+        <%end%>
+      </div>
     </div>
   </div>
 
