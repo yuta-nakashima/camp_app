@@ -32,16 +32,16 @@ unicorn '5.4.1'<br>
 
 ## 4.デモ
 ### トップページ
- <img width="whatever" height="whatever" src="https://i.gyazo.com/acaa7bc33e55f0cda548976d179cada3.gif" >
+![8ed3aeab8aed323144ac10c2ef4ae83c-min](https://user-images.githubusercontent.com/73780934/103085862-48dbd480-4626-11eb-8086-8dac673304f3.gif)
 
 ### ログイン後トップページ
- <img width="500" src="https://i.gyazo.com/acaa7bc33e55f0cda548976d179cada3.gif" >
+![b478dd93056d7f77d0527be76a4b4357-min](https://user-images.githubusercontent.com/73780934/103086779-cd2f5700-4628-11eb-8d0c-d19cb19cfe3b.gif)
 
 ### 投稿機能・写真一覧機能
- <img width="500" src="https://i.gyazo.com/d971cecda1d089131608c175395bc1b2.gif" >
+![d971cecda1d089131608c175395bc1b2-min](https://user-images.githubusercontent.com/73780934/103086627-73c72800-4628-11eb-8e8d-6a7110b2c4f0.gif)
 
 ### 検索機能
- <img width="500" src="https://i.gyazo.com/401dca74631dcec62ae3ee038e0c1134.gif" >
+ <img src="https://i.gyazo.com/401dca74631dcec62ae3ee038e0c1134.gif" >
 
 ## 5.使い方
 URL:	http://52.197.84.107/<br>
