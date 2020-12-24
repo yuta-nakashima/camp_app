@@ -31,10 +31,14 @@ unicorn '5.4.1'<br>
 コメント機能: その場の気持ちを簡単にコメントする。	写真投稿後コメントすることを可能にする。<br>
 
 ## 4.デモ
-トップページ<br> <img src="https://gyazo.com/24978dc41850c5657cd7a9764499c9fc" width="200"><br>
-ログイン後トップページ<br> https://gyazo.com/b478dd93056d7f77d0527be76a4b4357<br>
-投稿機能・写真一覧機能<br> https://gyazo.com/d971cecda1d089131608c175395bc1b2<br>
-検索機能<br> https://gyazo.com/401dca74631dcec62ae3ee038e0c1134<br>
+トップページ
+<img src="https://i.gyazo.com/8ed3aeab8aed323144ac10c2ef4ae83c.gif" width="500"><br>
+ログイン後トップページ<br>
+<img src="https://i.gyazo.com/b478dd93056d7f77d0527be76a4b4357.gif" width="500"><br>
+投稿機能・写真一覧機能<br> 
+<img src="https://i.gyazo.com/d971cecda1d089131608c175395bc1b2.gif" width="500"><br>
+検索機能<br> 
+<img src="https://i.gyazo.com/401dca74631dcec62ae3ee038e0c1134.gif" width="500"><br>
 
 ## 5.使い方
 URL:	http://52.197.84.107/<br>
