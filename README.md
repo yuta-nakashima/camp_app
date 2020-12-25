@@ -12,9 +12,11 @@
 ## 1.開発環境
 ruby '2.6.5'<br>
 rails '6.0.0'<br>
+### ローカル環境
 mysql2 '0.5.3'<br>
-aws-sdk-s3"<br>
 puma '3.11'<br>
+### 本番環境
+aws-sdk-s3"<br>
 unicorn '5.4.1'<br>
 
 ## 2.アプリケーション概要
