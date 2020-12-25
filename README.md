@@ -62,7 +62,10 @@ ID:admin, PW: 2222<br>
 新規登録を行い、キャンプの思い出を記録します。<br>
 
 ### ローカルでの動作方法<br>
-` git clone https://github.com/yuta-nakashima/chat-app.git`
+$ git clone https://github.com/yuta-nakashima/chat-app.git<br>
+$ bundle install<br>
+$ rails db:create<br>
+$ rails db:migrate<br>
 
 
 
